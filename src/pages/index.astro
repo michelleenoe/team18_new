@@ -1,6 +1,19 @@
 ---
 const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY";
 const apiUrl = "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023";
+fetch(apiUrl, {
+  method: "GET",
+  headers: {
+      'apikey': apikey
+  },
+})
+.then((response) => response.json())
+.then((data) => {
+// showVesterbro(data);
+})
+.catch((error) => {
+  console.error("Error fetching data:", error);
+});
 ---
 
 <html lang="en">
