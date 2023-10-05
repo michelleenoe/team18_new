@@ -1,0 +1,105 @@
+---
+import "../css/general.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Exhibitons</title>
+    <link rel="stylesheet" href="../css/general.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <h1>FAQ</h1>
+      <section class="grid-1">
+        <div>
+          <h2>The association Copenhagen Light Festival</h2>
+          <p>
+            The festival is a non-profit association founded by Tivoli, Stromma,
+            VNR.tv and Louis Poulsen / D Studio Copenhagen. With Copenhagen as a
+            backdrop the association seeks to introduce and present light art in
+            interaction with the city’s distinctiveness, darkness and
+            aesthetics.
+          </p>
+          <p>
+            The daily work on the festival is done by the secretariat who
+            assists the board, collaborates with artists and hosts and supports
+            the curatorial committee in their work with the festival program.
+          </p>
+          <p>
+            The members of the curatorial committee are appointed by the board
+            and have backgrounds within light art, lighting design,
+            architectural lighting, light events and art history. The committee
+            allocates the association’s funds to projects, artists and hosts on
+            the basis of an assessment of the festival’s overall expression, the
+            location of the art piece, and interaction with the city and the
+            other art pieces.
+          </p>
+        </div>
+        <div>
+          <p>heje</p>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
+
+<style>
+  /* Mobile */
+  @media screen and (max-width: 1000px) {
+    body {
+      background-image: linear-gradient(to bottom, #100000, #152141);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 36px;
+    }
+
+    .grid-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1000px) {
+    body {
+      background-image: linear-gradient(to bottom, #100000, #152141);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 36px;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+
+    h1 {
+      color: aliceblue;
+      text-align: center;
+    }
+    h2 {
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 32px;
+      color: #ffffff;
+    }
+
+    .grid-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+  }
+</style>
