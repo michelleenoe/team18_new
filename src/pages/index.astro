@@ -1,20 +1,3 @@
----
-const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY";
-const apiUrl = "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023";
-fetch(apiUrl, {
-  method: "GET",
-  headers: {
-      'apikey': apikey
-  },
-})
-.then((response) => response.json())
-.then((data) => {
-// showVesterbro(data);
-})
-.catch((error) => {
-  console.error("Error fetching data:", error);
-});
----
 
 <html lang="en">
 	<head>
@@ -23,8 +6,23 @@ fetch(apiUrl, {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<link rel="stylesheet" href="../style.css">
 	</head>
+		<style>
+	
+			body {
+				background-image: linear-gradient(to bottom, #000000, #152141);
+				background-attachment: fixed; 
+				background-repeat: no-repeat; 
+				background-size: cover; 
+				color: white; 
+				font-size: 36px;
+			}
+			h1 {
+				text-align: center;
+			}
+		</style>
 	<body>
-		<h1>Astro</h1>
-	</body>
+
+
 </html>
