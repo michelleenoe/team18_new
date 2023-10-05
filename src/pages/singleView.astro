@@ -1,0 +1,64 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<header>
+			<img class="logo" src="https://picsum.photos/id/65/10/150" alt="CLF Logo">
+		</header>
+		<main>
+		<section>
+			<img src="https://picsum.photos/id/65/150/150" alt="Exebhition picture">
+			<article>
+			<h2>Lorem</h2>
+			<h3>Who</h3>
+			<p class="artist">Lorem ipsum (DK)</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum repudiandae blanditiis magni cum. Accusamus asperiores sint harum beatae qui repellendus veniam iusto quo mollitia veritatis possimus, inventore corrupti. Dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolorum.
+			</p>
+			<h4>lorem</h4>
+			<p class="location">Lorem, ipsum dolor.</p>
+			<a class="kunstnerlist" href="#">Gå til kunstner</a>
+		</article>
+		</section>
+		<a class="back" href="#">Back</a>
+	</main>
+	</body>
+</html>
+<style>
+
+	.kunstnerlist, .artist, .location, h2, h3, h4{
+		text-align: center;
+	}
+	header{
+		display: grid;
+		grid-template-columns: 1fr 4fr 1fr;
+	}
+	main{
+        display: grid;
+		grid-template-columns: 1fr 4fr 1fr;
+        align-content: center;
+	}
+	section{
+		grid-column: 2;
+	}
+	section img{
+		margin: auto;
+		max-width: 100%;
+		display: block;
+	}
+	.back{
+	grid-column: 1 ;
+	grid-row: 1;
+	align-self: first baseline;
+	}
+	.logo{
+		max-height: 50%;
+		max-width: 100%;
+		border-radius: 10px;
+		margin: auto;
+	}
+</style>
