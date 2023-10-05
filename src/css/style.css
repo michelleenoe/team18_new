@@ -1,11 +1,4 @@
-html {
-  --primary: #1e3a52;
-  --primary_soft: #88a5be;
-  --secondary: #709f80;
-  --header: #2c754d;
-  --background: 
 
-}
 * {
 background-image: linear-gradient(to bottom, #100000, #152141);
 background-attachment: fixed; 
