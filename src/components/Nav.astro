@@ -6,7 +6,9 @@
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
+        <div class="cross-icon" id="cross-icon">✕</div>
       </div>
+  
     </div>
     <div class="overlay" id="overlay">
       <ul>
@@ -40,15 +42,25 @@
   
 
 <script>
-    const burger = document.getElementById("burger");
+const burger = document.getElementById("burger");
+const crossIcon = document.getElementById("cross-icon");
 const overlay = document.getElementById("overlay");
+
 burger.addEventListener("click", () => {
-    overlay.classList.toggle("active");
-    burger.classList.toggle("active");
+  overlay.classList.toggle("active");
+  burger.classList.toggle("active");
+  
+  // Toggle visibility of burger and cross icons
+  burger.classList.toggle("hidden");
+  crossIcon.classList.toggle("hidden");
 });
+
 </script>
 
 <style>
+  nav {
+font-family: 'Roboto Mono', monospace;
+  }
     nav {
     margin: 0;
     padding: 0;
@@ -94,9 +106,9 @@ burger.addEventListener("click", () => {
     align-items: center;
     transition: right 0.3s ease-in-out;
     background-image: linear-gradient(to bottom, #100000, #152141); 
-background-attachment: fixed; 
-background-repeat: no-repeat; 
-background-size: cover; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 .overlay ul {
@@ -135,7 +147,7 @@ a {
   padding: 1rem;
   border: 1px solid white;
   text-decoration: none;
-  color:white;
+
   font-size: 1.3rem;
 
 }
@@ -147,6 +159,22 @@ a {
 .menu-arrow {
   font-size: 40px;
 }
+.cross-icon {
+  font-size: 35px;
+  color: white;
+  display: none; 
+}
+
+
+.burger.active .bar {
+  display: none;
+}
+
+
+.burger.active .cross-icon {
+  display: block;
+}
+
 
 
 @media screen and (max-width: 768px) {
