@@ -1,5 +1,5 @@
 
-<nav>
+
   <nav>
     <div class="burger-menu">
       <div class="burger" id="burger">
@@ -54,6 +54,7 @@ burger.addEventListener("click", () => {
     padding: 0;
     height: 100%;
     overflow: hidden;
+
 }
 
 .burger-menu {
@@ -92,6 +93,10 @@ burger.addEventListener("click", () => {
     justify-content: center;
     align-items: center;
     transition: right 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, #100000, #152141); 
+background-attachment: fixed; 
+background-repeat: no-repeat; 
+background-size: cover; 
 }
 
 .overlay ul {
@@ -112,6 +117,7 @@ burger.addEventListener("click", () => {
 
 .overlay.active {
     right: 0;
+    
 }
 a {
   display: inline-block;
