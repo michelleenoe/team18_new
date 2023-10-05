@@ -1,0 +1,34 @@
+---
+import "../css/general.css";
+import Card from "../components/Card.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Exhibitons</title>
+    <link rel="stylesheet" href="../css/general.css" />
+  </head>
+
+  <body>
+    <header>
+        <h2>Where</h2>
+        <h2>Artists</h2>
+        <h2>Events</h2>
+    </header>
+    
+    <main class="grid_1-1-1-1">
+      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
+      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
+      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
+      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
+    </main>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 *{
     background: linear-gradient(to bottom, black, darkblue);
     /* Du kan tilpasse farverne efter dine præferencer */
   }
   
+=======
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}.grid_1-1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+>>>>>>> 2cd16e6280dfeeb6eb5938e6d0c256e4be2c8147
