@@ -42,14 +42,32 @@ import "../css/general.css";
             other art pieces.
           </p>
         </div>
-        <div>
-          <p>heje</p>
-        </div>
+        <article class="who-card">
+          <img
+            class="jesper"
+            src="../img/Jesper.png"
+            alt="et billede af jesper"
+          />
+          <p>Jesper Kongshaug</p>
+          <p>Chairman</p>
+          <p>Lighting designer Tivoli</p>
+        </article>
+
+        <article class="who-card">
+          <img
+            class="jesper"
+            src="../img/Jesper.png"
+            alt="et billede af jesper"
+          />
+          <p>Jesper Kongshaug</p>
+          <p>Chairman</p>
+          <p>Lighting designer Tivoli</p>
+        </article>
       </section>
     </main>
-
-    <footer></footer>
   </body>
+
+  <footer></footer>
 </html>
 
 <style>
@@ -101,5 +119,19 @@ import "../css/general.css";
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
     }
+  }
+
+  .who-card p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .who-card {
+    border-bottom: 2.1px solid white;
+  }
+
+  .jesper {
+    border-radius: 15px;
+    width: 45%;
   }
 </style>
