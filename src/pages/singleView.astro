@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="https://picsum.photos/id/65/10/150" alt="CLF Logo">
+			<img class="logo" src="https://picsum.photos/id/6/150/150" alt="CLF Logo">
 		</header>
 		<main>
 		<section>
@@ -21,7 +21,9 @@
 			</p>
 			<h4>lorem</h4>
 			<p class="location">Lorem, ipsum dolor.</p>
-			<a class="kunstnerlist" href="#">Gå til kunstner</a>
+			<div class="kunstnerlist">
+			<a href="#">Gå til kunstner</a>
+		</div>
 		</article>
 		</section>
 		<a class="back" href="#">Back</a>
@@ -30,8 +32,19 @@
 </html>
 <style>
 
-	.kunstnerlist, .artist, .location, h2, h3, h4{
+	.kunstnerlist a{
+		color: #FF9900;
+	} 
+	.kunstnerlist{
 		text-align: center;
+		font-weight: bold;
+	}
+	 .artist, .location, h2, h3, h4{
+		text-align: center;
+	}
+	h2, h3, h4, h5, h6, p, a{
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: white;
 	}
 	header{
 		display: grid;
@@ -39,11 +52,12 @@
 	}
 	main{
         display: grid;
-		grid-template-columns: 1fr 4fr 1fr;
+		grid-template-columns: 1fr 6fr 1fr;
         align-content: center;
 	}
 	section{
 		grid-column: 2;
+		grid-row: 2;
 	}
 	section img{
 		margin: auto;
@@ -54,6 +68,9 @@
 	grid-column: 1 ;
 	grid-row: 1;
 	align-self: first baseline;
+	margin: auto;
+	font-weight: bold;
+	color: #FF9900;
 	}
 	.logo{
 		max-height: 50%;
