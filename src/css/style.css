@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
     --bg-gradient: linear-gradient(to bottom, #100000, #152141);
     --primary-text: white;
