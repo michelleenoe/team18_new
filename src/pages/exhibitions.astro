@@ -5,7 +5,7 @@ import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
 
 const data = await fetch(
-  "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
+  "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023?select=*&&limit=10&offset=${rowNumber - 1",
   {
     method: "GET",
     headers: {
@@ -13,7 +13,9 @@ const data = await fetch(
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY",
     },
   }
+ 
 ).then((res) => res.json());
+
 
 console.log(data);
 ---
@@ -36,7 +38,7 @@ console.log(data);
       <h2>Events</h2>
     </header>
 
-    <main class="grid_1-1">
+    <main>
       <article>
           {
         data.map((card) => {
