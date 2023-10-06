@@ -1,8 +1,21 @@
 ---
 import "../css/general.css";
-import "../css/style.css"
+import "../css/style.css";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
+
+const data = await fetch(
+  "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
 ---
 
 <html lang="en">
@@ -16,27 +29,70 @@ import Nav from "../components/Nav.astro";
 
   <body>
     <header>
-      <Nav/>
-      <img src="https://picsum.photos/id/364/100/100" alt="LOGO">
-        <h2>Where</h2>
-        <h2>Artists</h2>
-        <h2>Events</h2>
+      <Nav />
+      <img src="https://picsum.photos/id/364/100/100" alt="LOGO" />
+      <h2>Where</h2>
+      <h2>Artists</h2>
+      <h2>Events</h2>
     </header>
-    
+
     <main class="grid_1-1">
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
-      <Card image="https://picsum.photos/id/364/150/150" title="Stor Lys" address="Jægergade 12, 2300" link="www.instagram.com/dogs"/>
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
+      <Card
+        image="https://picsum.photos/id/364/150/150"
+        title="Stor Lys"
+        address="Jægergade 12, 2300"
+        link="www.instagram.com/dogs"
+      />
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>
