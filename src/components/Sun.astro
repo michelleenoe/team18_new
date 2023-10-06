@@ -1,0 +1,70 @@
+
+    <footer>
+        <div class="sun">
+            <img src="sun.png" alt="Sun">
+        </div>
+        <div class="stars">
+            <img src="../../img/bg/" alt="Star 1">
+            <img src="star2.png" alt="Star 2">
+            <img src="star3.png" alt="Star 3">
+        </div>
+    </footer>
+
+    <style>
+        /* Generelle stilarter for footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* For at positionere solen og stjernerne korrekt */
+}
+
+/* Stil for solen */
+.sun {
+    position: relative;
+    width: 100px; /* Juster efter din sols størrelse */
+    height: 100px; /* Juster efter din sols størrelse */
+    margin: 0 auto; /* Center solen vandret */
+}
+
+.sun img {
+    width: 100%;
+    height: auto;
+    transform: translateY(50%); /* Flyt solen nedad med 50% af sin egen højde */
+}
+
+/* Stil for stjernerne */
+.stars {
+    position: absolute;
+    top: 50%; /* Placer stjernerne i midten lodret */
+    left: 50%; /* Placer stjernerne i midten vandret */
+    transform: translate(-50%, -50%); /* Flyt stjernerne tilbage til midten */
+}
+
+.stars img {
+    width: 20px; /* Juster efter din stjernes størrelse */
+    height: 20px; /* Juster efter din stjernes størrelse */
+    margin: 5px; /* Afstand mellem stjernerne */
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+    /* Stil for solen på desktop */
+    .sun {
+        width: 150px; /* Juster efter din sols størrelse på desktop */
+        height: 150px; /* Juster efter din sols størrelse på desktop */
+    }
+
+    .sun img {
+        transform: translateY(30%); /* Flyt solen nedad med 30% af sin egen højde på desktop */
+    }
+
+    .stars img {
+        width: 30px; /* Juster efter din stjernes størrelse på desktop */
+        height: 30px; /* Juster efter din stjernes størrelse på desktop */
+        margin: 10px; /* Øg afstanden mellem stjernerne på desktop */
+    }
+}
+
+    </style>
