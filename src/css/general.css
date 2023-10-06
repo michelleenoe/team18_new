@@ -1,18 +1,18 @@
-.grid_1-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7%;
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
 }
 
-.grid_1-1-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-}.grid_1-1-1-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-body{
-    margin: 2% 10%;
+body {
+  margin: 2% 10%;
 }

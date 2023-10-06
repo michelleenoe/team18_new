@@ -1,20 +1,17 @@
 ---
-const {image, title, address, link} = Astro.props;
+const {data} = Astro.props;
+console.log(data);
 ---
 
 <article>
-    <img src={image} alt="">
-    <h2>{title}</h2>
-    <h3>{address}</h3>
-    <a href={link}>Kunsteren</a>
-    <slot />
+    <!-- <img src={data.image} alt="Exhibitonphoto">  -->
+    <h2>{data.navn}</h2>
+    <h3>{data.where}</h3>
+    <h4>Kunstneren: {data.links}</h4>
 </article>
 
 <style>
    article{
-    align-items: center; 
-    display: grid;
-    grid-template-columns: 1fr;
     margin: 5% 0%;
     max-width: 90%;
    }
@@ -46,11 +43,13 @@ const {image, title, address, link} = Astro.props;
     margin-top: 10%;
    }
 
-   a{
+   h4{
     display: flex;
     justify-content: center;
-    font-size: 24px;
-    margin: auto;
+    color: white;
+    font-size: 12px;
+    margin: 10% auto;
+    margin-top: 10%;
    }
 
 

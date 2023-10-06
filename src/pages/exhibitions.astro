@@ -37,60 +37,13 @@ console.log(data);
     </header>
 
     <main class="grid_1-1">
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
+      <article>
+          {
+        data.map((card) => {
+          return <Card data={card} />;
+        })
+      }
+    </article>
     </main>
 
     <footer></footer>
