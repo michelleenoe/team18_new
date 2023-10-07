@@ -1,6 +1,7 @@
 ---
 import "../css/general.css";
 import Nav from "../components/Nav.astro";
+import WhoCards from "../components/WhoCards.astro";
 ---
 
 <html lang="en">
@@ -14,11 +15,11 @@ import Nav from "../components/Nav.astro";
   </head>
 
   <body>
-    <header><Nav/></header>
+    <header></header>
 
     <main>
-      <h1>FAQ</h1>
-      <section class="grid-1">
+      <h1>About</h1>
+      <section class="grid-1-1">
         <div>
           <h2>The association Copenhagen Light Festival</h2>
           <p>
@@ -43,32 +44,39 @@ import Nav from "../components/Nav.astro";
             other art pieces.
           </p>
         </div>
-        <article class="who-card">
-          <img
-            class="jesper"
-            src="../img/Jesper.png"
-            alt="et billede af jesper"
+        <section class="box-containers">
+          <WhoCards
+            image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/cb51e01e-6b26-4b05-b0a8-cd6425a3cce6.gif?ClientID=vimeo-core-prod&Date=1637743816&Signature=e85ad6ec4ce4a2137b7c03f3b97a426f349f6524"
+            text1="Jesper Kongshaug"
+            text2="Chairman"
+            text3="Lighting designer Tivoli"
           />
-          <p>Jesper Kongshaug</p>
-          <p>Chairman</p>
-          <p>Lighting designer Tivoli</p>
-        </article>
-
-        <article class="who-card">
-          <img
-            class="jesper"
-            src="../img/Jesper.png"
-            alt="et billede af jesper"
+          <WhoCards
+            image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/78c54f8a-1f37-4bc2-94e1-b77d7cbf68a4.gif?ClientID=vimeo-core-prod&Date=1637745162&Signature=6a63c04a3d8274f3cb40797dcc072944fc9edab5"
+            text1="Mads Vestergaard Olesen"
+            text2="Vice chairman"
+            text3="Adm. dir. / CEO, Stromma Denmark A/S"
           />
-          <p>Jesper Kongshaug</p>
-          <p>Chairman</p>
-          <p>Lighting designer Tivoli</p>
-        </article>
+          <WhoCards
+            image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/bfbc8645-93d4-4300-a193-62afb829ef38.gif?ClientID=vimeo-core-prod&Date=1637743799&Signature=9abbc14b15fa3ffd00d2245258685c222513b920"
+            text1="Pia Allerslev"
+            text2="Board member"
+            text3="Former Mayor of culture, Copenhagen municipality"
+          />
+          <WhoCards
+            image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aafd0518-c05f-436a-ab97-bd30ff7c722c.gif?ClientID=vimeo-core-prod&Date=1637743887&Signature=0a35e1e8e680499db15b50dba4d98725e8621109"
+            text1="Anders Kongshaug"
+            text2="Board member"
+            text3="Director, vnr.TV…be seen more"
+          />
+        </section>
+      </section>
+      <section class="grid-1-1">
+        <img src="../img/Whoarewe1.png" alt="" />
       </section>
     </main>
+    <footer></footer>
   </body>
-
-  <footer></footer>
 </html>
 
 <style>
@@ -79,12 +87,38 @@ import Nav from "../components/Nav.astro";
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
-      font-size: 36px;
+      margin-right: 8%;
+      margin-left: 8%;
     }
 
-    .grid-1 {
+    .grid-1-1 {
       display: grid;
       grid-template-columns: 1fr;
+      gap: 2rem;
+      border-bottom: 2px solid white;
+      padding-bottom: 50px;
+    }
+
+    .box-containers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: aliceblue;
+      text-align: center;
+    }
+    h2 {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 32px;
+      color: #ffffff;
     }
   }
 
@@ -115,24 +149,19 @@ import Nav from "../components/Nav.astro";
       color: #ffffff;
     }
 
-    .grid-1 {
+    .grid-1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
+      border-bottom: 2px solid white;
+      padding-bottom: 50px;
     }
-  }
 
-  .who-card p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .who-card {
-    border-bottom: 2.1px solid white;
-  }
-
-  .jesper {
-    border-radius: 15px;
-    width: 45%;
+    .box-containers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding-top: 50px;
+    }
   }
 </style>

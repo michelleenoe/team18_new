@@ -1,0 +1,38 @@
+---
+const { image, text1, text2, text3 } = Astro.props;
+---
+
+<article class="box-container">
+  <img class="box-image" src={image} alt="billede" />
+  <p class="box-text">{text1}</p>
+  <p class="box-text">{text2}</p>
+  <p class="box-text">{text3}</p>
+</article>
+
+<style>
+  /* Style for the container */
+  .box-container {
+    max-width: 270px;
+    height: 235px;
+    margin: 0 auto;
+    border-bottom: 2px solid white;
+  }
+
+  .box-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+  }
+
+  /* Style for the text */
+  .box-text {
+    text-align: center;
+    font-size: 12.8px;
+    line-height: 10px;
+  }
+
+  p {
+    color: aliceblue;
+  }
+</style>
