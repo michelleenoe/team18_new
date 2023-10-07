@@ -36,63 +36,38 @@ console.log(data);
       <h2>Events</h2>
     </header>
 
-    <main class="grid_1-1">
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
-      <Card
-        image="https://picsum.photos/id/364/150/150"
-        title="Stor Lys"
-        address="Jægergade 12, 2300"
-        link="www.instagram.com/dogs"
-      />
+    <main>
+      <article>
+        {
+          data.map((card) => {
+            return <Card data={card} />;
+          })
+        }
+      </article>
     </main>
-
-    <footer></footer>
   </body>
 </html>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0% 7%;
+  }
+
+  @media (max-width: 575px) {
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  main{
+    margin: 0 5%;
+  }
+
+
+
+</style>

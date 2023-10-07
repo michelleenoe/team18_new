@@ -1,35 +1,44 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
-    --bg-gradient: linear-gradient(to bottom, #100000, #152141);
-    --primary-text: white;
-    --secondary-text: #FF9900;
-    --font-family: Arial, sans-serif;
-    /* --text-size: 16px; */
-  }
+  --bg-gradient: linear-gradient(to bottom, #100000, #152141);
+  --primary-text: white;
+  --secondary-text: #FF9900;
+  --font-family: Arial, sans-serif;
+  --text-size: 20px;
+  --content-padding: 20px;
+  --header-margin-bottom: 20px;
+  --footer-margin-top: 20px;
+}
 
-  body {
-    background-image: var(--bg-gradient);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 2% 10%;
-  }
-  
-    
+body {
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: var(--content-margin) 10%; 
+  padding: var(--content-padding);
+}
 
-  p {
-    color: var(--primary-text);
-  }
-  
-  h1, h2, h3 {
-    color:var(--primary-text);
-    font-family: var(--font-family);
-  }
-  
+p {
+  color: var(--primary-text);
+}
 
-  p, li {
-    font-size: var(--text-size);
-  }
-  
+h1, h2, h3 {
+  color: var(--primary-text);
+  font-family: var(--font-family);
+}
+
+p, li {
+  font-size: var(--text-size);
+}
+
+header {
+  margin-bottom: var(--header-margin-bottom);
+}
+
+footer {
+  margin-top: var(--footer-margin-top);
+}
