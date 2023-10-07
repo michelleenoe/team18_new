@@ -1,7 +1,5 @@
 ---
 import "../css/style.css";
-import Nav from "../components/Nav.astro";
-
 ---
 <html lang="en">
 	<head>
@@ -13,7 +11,6 @@ import Nav from "../components/Nav.astro";
 	</head>
 	<body>
 		<header>
-			<Nav/>
 			<img class="logo" src="https://picsum.photos/id/6/150/150" alt="CLF Logo">
 		</header>
 		<main>
@@ -39,7 +36,7 @@ import Nav from "../components/Nav.astro";
 <style>
 
 	.kunstnerlist a{
-		color: #FF9900;
+		color: var(--secondary-text);
 		font-size: 30px;
 	} 
 	.kunstnerlist{
@@ -90,7 +87,6 @@ import Nav from "../components/Nav.astro";
 	margin: auto;
 	font-weight: bold;
 	font-size: 20px;
-	color: #FF9900;
 	}
 	.logo{
 		max-height: 50%;

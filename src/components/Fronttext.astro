@@ -1,22 +1,65 @@
-
 <body>
     <h1>
-      DISCOVER COPENHAGEN THROUGH LIGTHS
+        DISCOVER COPENHAGEN THROUGH LIGHTS
     </h1>
 </body>
 
-
 <style>
-        section {
-            text-align: center;
+    body {
+        font-family: var(--font-family);
+        background-color: var(--bg-gradient);
+        color: var(--primary-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: var(--content-margin);
+        text-align: center; 
+    }
+
+    a {
+        color: var(--primary-text);
+        text-decoration: none;
+        font-size: var(--text-size);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+        padding: var(--content-padding);
+        border: 1px solid var(--primary-text);
+        margin-right: 10px;
+    }
+
+    .menu-arrow {
+        font-size: var(--text-size);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    h1 {
+        padding: var(--heading-padding);
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-item {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: var(--content-margin);
         }
 
         h1 {
-            padding: 20px;
+            padding: 10px;
         }
-        @media (max-width: 768px) {
-            h1 {
-                padding: 10px;
-            }
-        }
+    }
 </style>
