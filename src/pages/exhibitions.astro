@@ -13,7 +13,6 @@ const data = await fetch(
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY",
     },
   }
-  
 ).then((res) => res.json());
 
 console.log(data);
@@ -39,14 +38,38 @@ console.log(data);
 
     <main>
       <article>
-          {
-        data.map((card) => {
-          return <Card data={card} />;
-        })
-      }
-    </article>
+        {
+          data.map((card) => {
+            return <Card data={card} />;
+          })
+        }
+      </article>
     </main>
-
-    <footer></footer>
   </body>
 </html>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0% 7%;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 575px) {
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+
+
+</style>

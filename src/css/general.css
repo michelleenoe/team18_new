@@ -1,7 +1,6 @@
 .grid_1-1 {
   display: grid;
   grid-template-columns:  1fr 1fr; /* Two equal-width columns */
-  grid-template-rows: 1fr 1fr;
 }
 
 .grid_1-1-1 {
