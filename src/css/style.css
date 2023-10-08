@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: var(--content-margin) 10%; 
-  padding: var(--content-padding);
+  padding-top: var(--content-padding);
 }
 
 p {
