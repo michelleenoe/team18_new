@@ -5,7 +5,7 @@ console.log(data);
 
 <article>
   <a class="gotosingle" @href={`single/${data.slug}`}>
-    <img src={data.image} alt="Exhibition photo"> 
+    <img src={data.image} alt="Exhibition photo" />
     <h2>{data.navn}</h2>
     <h3>{data.where}</h3>
   </a>
@@ -13,8 +13,6 @@ console.log(data);
     <a class="linka" href={data.links} target="_blank">GO TO ARTIST</a>
   </h4>
 </article>
-
-
 
 <style>
   article {
@@ -39,7 +37,6 @@ console.log(data);
     color: white;
     font-size: 16px;
     margin: auto;
-    
   }
 
   h3 {
@@ -47,7 +44,6 @@ console.log(data);
     color: white;
     font-size: 12px;
     justify-content: center;
-    
   }
 
   h4 {
@@ -63,7 +59,7 @@ console.log(data);
     margin-bottom: 15%;
   }
 
-  .linka{
+  .linka {
     color: white;
   }
 
@@ -71,36 +67,31 @@ console.log(data);
     text-decoration: none;
   }
 
-
-
   @media (min-width: 1250px) {
-    article{
+    article {
       width: 110%;
     }
 
     h2 {
       height: 12%;
-    font-size: 20px;
-  }
+      font-size: 20px;
+    }
 
-  h3 {
-    font-size: 16px;
-    height: 10%;
-  }
+    h3 {
+      font-size: 16px;
+      height: 10%;
+    }
 
-  h4 {
-    font-size: 16px;
-  }
+    h4 {
+      font-size: 16px;
+    }
 
-  .alink {
-    font-size: 16px;
-  }
-  
-  .alink {
-    margin-bottom: 25%;
-  }
-  }
+    .alink {
+      font-size: 16px;
+    }
 
-  
-
+    .alink {
+      margin-bottom: 25%;
+    }
+  }
 </style>
