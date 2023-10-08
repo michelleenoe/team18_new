@@ -55,6 +55,10 @@ console.log(data);
     gap: 0% 7%;
   }
 
+  main{
+    margin: 0 5%;
+  }
+
   @media (max-width: 575px) {
     article {
       display: flex;
@@ -64,10 +68,11 @@ console.log(data);
     }
   }
 
-  main{
-    margin: 0 5%;
+  @media (min-width: 1250px) {
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
-
-
 
 </style>
