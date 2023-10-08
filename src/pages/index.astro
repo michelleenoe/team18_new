@@ -4,29 +4,30 @@ import Fronttext from "../components/Fronttext.astro";
 import Frontnav from "../components/Frontnav.astro";
 import Frontimg from "../components/Frontimg.astro";
 import Sun from "../components/Sun.astro";
+import Header from "../components/Header.astro";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Copenhagen Light Festival</title>
-</head>
-<header>
-    <br>
-</header>
-<body>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+
     <main>
-<Frontimg/>
-<Fronttext/>
-    <Frontnav />
+      <Frontimg />
+      <Fronttext />
+      <Frontnav />
     </main>
     <footer>
-        <Sun/> 
+      <Sun />
     </footer>
-</body>
-
-
+  </body>
 </html>

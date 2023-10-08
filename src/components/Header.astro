@@ -1,0 +1,43 @@
+
+<script>
+    var countDownDate = new Date("Feb 3, 2024 00:00:00").getTime();
+
+    // Opdater nedtællingen hvert sekund
+    var x = setInterval(function() {
+        // Den aktuelle dato og tid
+        var now = new Date().getTime();
+
+        // Beregn forskellen mellem den aktuelle dato og nedtællingsdatoen
+        var distance = countDownDate - now;
+
+        // Beregn dage, timer, minutter og sekunder tilbage
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Vis nedtællingen i et element med id'en "countdown"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // Hvis nedtællingen er nået, vis en besked
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Nedtællingen er slut!";
+        }
+    }, 1000); // Opdater hvert sekund
+</script>
+<header>
+                <span id="countdown">tid</span>
+                <div class="date">
+                    <p> UNTIL  </p> 
+        
+        </div>
+    </header>
+
+<style>
+.date, #countdown{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+</style>
