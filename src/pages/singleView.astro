@@ -1,5 +1,6 @@
 ---
 import "../css/style.css";
+import Nav from "../components/Nav.astro";
 ---
 <html lang="en">
 	<head>
@@ -12,6 +13,7 @@ import "../css/style.css";
 	<body>
 		<header>
 			<img class="logo" src="https://picsum.photos/id/6/150/150" alt="CLF Logo">
+			<Nav/>
 		</header>
 		<main>
 		<section>
@@ -95,9 +97,17 @@ import "../css/style.css";
 		margin: auto;
 		grid-column: 1;
 	}
-	@media(min-width: 800px;){
-		main{
-		grid-template-columns: 1fr 1fr;
-		}
-	}
+
+    @media (min-width: 800px) {
+        main {
+            flex-direction: row;
+        }
+        section {
+            margin-right: 20px;
+            text-align: left;
+        }
+        .back {
+            order: -1;
+        }
+    }
 </style>
