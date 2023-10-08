@@ -4,15 +4,16 @@ console.log(data);
 ---
 
 <article>
-  <a class="gotosingle" href=`single/${data.slug}`>
-  <img src={data.image} alt="Exhibitonphoto"> 
-  <h2>{data.navn}</h2>
-  <h3>{data.where}</h3>
-</a>
-<h4 class="alink">
-    <a class="linka" href="{data.links}" target="_blank">Gå til kunstner</a>
+  <a class="gotosingle" @href={`single/${data.slug}`}>
+    <img src={data.image} alt="Exhibition photo"> 
+    <h2>{data.navn}</h2>
+    <h3>{data.where}</h3>
+  </a>
+  <h4 class="alink">
+    <a class="linka" href={data.links} target="_blank">GO TO ARTIST</a>
   </h4>
 </article>
+
 
 
 <style>
@@ -94,6 +95,12 @@ console.log(data);
   .alink {
     font-size: 16px;
   }
+  
+  .alink {
+    margin-bottom: 25%;
   }
+  }
+
+  
 
 </style>
