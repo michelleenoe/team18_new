@@ -52,6 +52,9 @@
         justify-content: center;
         align-items: center;
     }
+    .menu-text {
+          transition: transform 0.3s ease;
+    }
 
     .menu-item {
         display: flex;
@@ -61,8 +64,12 @@
         padding: var(--content-padding);
         border: 1px solid var(--primary-text);
         margin-right: 10px;
+        box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.425); (255, 255, 255, 0.25);
+      
     }
-
+    .menu-item:hover {
+  transform: translateX(5px);
+    }
     .menu-arrow {
         font-size: var(--text-size);
         color:var(--primary-text);
