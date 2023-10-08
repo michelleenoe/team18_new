@@ -3,6 +3,7 @@ import "../css/general.css";
 import "../css/style.css";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
+import Logo from "../components/Logo.astro";
 
 const data = await fetch(
   "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
@@ -29,8 +30,8 @@ console.log(data);
 
   <body>
     <header>
-      <Nav />
-      <img src="..\img\little-logo.svg" alt="LOGO" />
+      <Logo/>
+      <Nav/>
       
     </header>
 
