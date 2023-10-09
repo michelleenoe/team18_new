@@ -1,0 +1,18 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<section>
+    <img src={data.image} alt="Exhibition photo"> 
+    <article>
+    <h2>{data.navn}</h2>
+    <h3>{data.who}</h3>
+    <p class="info">{data.info}</p>
+    <h4>Thanks to</h4>
+    <p class="location">{data.where}</p>
+    <div class="kunstnerlist">
+    <a href="#">Gå til kunstner</a>
+</div>
+</article>
+</section>
