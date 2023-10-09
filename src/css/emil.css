@@ -1,7 +1,6 @@
 /* Mobile */
 @media screen and (max-width: 1000px) {
   body {
-    background-image: linear-gradient(to bottom, #100000, #152141);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,31 +31,27 @@
 
   h1 {
     font-size: 40px;
-    color: aliceblue;
     text-align: center;
   }
   h2 {
-    color: rgb(255, 255, 255);
     font-size: 20px;
   }
   p {
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 32px;
-    color: #ffffff;
   }
   ul li {
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 30px;
-    color: #ffffff;
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
   body {
-    background-image: linear-gradient(to bottom, #100000, #152141);
+  
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +61,7 @@
   }
 
   h1 {
-    color: aliceblue;
+    color:var( --primary-text);
     text-align: center;
   }
   h2 {
