@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;600;900&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,8 +8,7 @@ html {
   --bg-gradient: linear-gradient(to bottom, #100000, #152141);
   --primary-text: white;
   --secondary-text: #FF9900;
-  --font-family: Arial, sans-serif;
-  --text-size: 20px;
+  --font-family: 'Kanit', sans-serif;
   --content-padding: 20px;
   --header-margin-bottom: 20px;
   --footer-margin-top: 20px;
@@ -24,15 +25,24 @@ body {
 
 p {
   color: var(--primary-text);
+  font-family:var(--font-family);
+  font-size:15px;
+  font-weight: 300;
 }
 
-h1, h2, h3 {
-  color: var(--primary-text);
-  font-family: var(--font-family);
+h1, h2 {
+  font-weight: 600;
 }
+h3, a {
+  color: var(--secondary-text);
+  font-weight: 300;
+  font-family: 'Kanit', sans-serif;
 
+}
 p, li {
-  font-size: var(--text-size);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 300;
 }
 
 header {
