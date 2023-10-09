@@ -1,9 +1,9 @@
 ---
 import "../css/general.css";
+import "../css/emil.css";
 import Nav from "../components/Nav.astro";
 import WhoCards from "../components/WhoCards.astro";
 import Logo from "../components/Logo.astro";
-
 ---
 
 <html lang="en">
@@ -12,20 +12,31 @@ import Logo from "../components/Logo.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Exhibitons</title>
+    <title>About</title>
     <link rel="stylesheet" href="../css/general.css" />
   </head>
 
   <body>
     <header>
-      <Nav/>
-      <Logo/>
+      <Nav />
+      <Logo />
     </header>
 
     <main>
       <h1>About</h1>
-      <section class="grid-1-1">
-        <div>
+      <div class="nav2">
+        <nav>
+          <li>
+            <a href="#sec1">The association Copenhagen Light Festival</a>
+          </li>
+          <li><a href="#sec2">What is Copenhagen Light Festival</a></li>
+          <li><a href="#sec3">Vision and creative platform</a></li>
+        </nav>
+      </div>
+    </main>
+    <section id="sec1">
+      <div class="grid-1-1">
+        <article>
           <h2>The association Copenhagen Light Festival</h2>
           <p>
             The festival is a non-profit association founded by Tivoli, Stromma,
@@ -48,7 +59,7 @@ import Logo from "../components/Logo.astro";
             location of the art piece, and interaction with the city and the
             other art pieces.
           </p>
-        </div>
+        </article>
         <section class="box-containers">
           <WhoCards
             image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/cb51e01e-6b26-4b05-b0a8-cd6425a3cce6.gif?ClientID=vimeo-core-prod&Date=1637743816&Signature=e85ad6ec4ce4a2137b7c03f3b97a426f349f6524"
@@ -60,7 +71,7 @@ import Logo from "../components/Logo.astro";
             image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/78c54f8a-1f37-4bc2-94e1-b77d7cbf68a4.gif?ClientID=vimeo-core-prod&Date=1637745162&Signature=6a63c04a3d8274f3cb40797dcc072944fc9edab5"
             text1="Mads Vestergaard Olesen"
             text2="Vice chairman"
-            text3="Adm. dir. / CEO, Stromma Denmark A/S"
+            text3="Adm. dir. / CEO, hos Stromma Denmark A/S"
           />
           <WhoCards
             image="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/bfbc8645-93d4-4300-a193-62afb829ef38.gif?ClientID=vimeo-core-prod&Date=1637743799&Signature=9abbc14b15fa3ffd00d2245258685c222513b920"
@@ -75,98 +86,79 @@ import Logo from "../components/Logo.astro";
             text3="Director, vnr.TV…be seen more"
           />
         </section>
-      </section>
-      <section class="grid-1-1">
-        <img src="../img/Whoarewe1.png" alt="" />
-      </section>
-    </main>
+      </div>
+    </section>
+    <div class="glowing-border">
+      <!-- Content goes here -->
+    </div>
+
+    <section id="sec2">
+      <div class="grid-1-1">
+        <div class="yt-video">
+          <iframe
+            width="600"
+            height="350"
+            src="https://www.youtube.com/embed/37wnUtY7Hmk?si=BrAWf_6qJHmUvLbB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <article>
+          <h2>What is Copenhagen Light Festival</h2>
+          <p>
+            The Copenhagen Light Festival is an annual event held in February,
+            celebrating light art and illumination in Copenhagen. It showcases a
+            variety of light-based works created by local and international
+            artists, lighting designers, and students. The festival's curated
+            program transforms the city's spaces, including squares, facades,
+            bridges, and hidden places, into engaging, illuminated
+            installations. Most of the artworks are located along a path in the
+            inner city and harbor, with some outside the city center. This event
+            invites people of all ages to experience the magic of light during
+            the darkest and coldest time of the year in Copenhagen.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sec3">
+      <div class="grid-1-1">
+        <article>
+          <h2>Vision and creative platform</h2>
+          <p>
+            The Copenhagen Light Festival should celebrate Nordic Lighting
+            Design traditions by embracing unique Nordic daylight qualities.
+            Prioritize both natural and artificial light quality, experimenting
+            with colors, movement, and occasional sound to create immersive,
+            meditative experiences. Balance between artificial and daylight is
+            essential. The festival's goal is to showcase light as an expressive
+            and transformative art form while connecting with local light
+            appreciation.
+          </p>
+          <ul>
+            <li>Respect of and in balance with the darkness.</li>
+            <li>
+              Installations that improves life through interaction with human
+              needs, architecture and spaces.
+            </li>
+            <li>
+              Optimal balance between function, aesthetics and sustainability.
+            </li>
+            <li>
+              Examples of minimalistic beauty and functionality to honour the
+              Scandinavian Design traditions.
+            </li>
+            <li>
+              Examples of festive and expressive installations, to the take
+              advantage of a temporary element.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
 
-<style>
-  /* Mobile */
-  @media screen and (max-width: 1000px) {
-    body {
-      background-image: linear-gradient(to bottom, #100000, #152141);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin-right: 8%;
-      margin-left: 8%;
-    }
-
-    .grid-1-1 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      border-bottom: 2px solid white;
-      padding-bottom: 50px;
-    }
-
-    .box-containers {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    h1 {
-      font-size: 40px;
-      color: aliceblue;
-      text-align: center;
-    }
-    h2 {
-      color: rgb(255, 255, 255);
-      font-size: 20px;
-    }
-    p {
-      font-size: 16px;
-      letter-spacing: 2px;
-      line-height: 32px;
-      color: #ffffff;
-    }
-  }
-
-  /* Desktop */
-  @media screen and (min-width: 1000px) {
-    body {
-      background-image: linear-gradient(to bottom, #100000, #152141);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      font-size: 36px;
-      margin-right: 10%;
-      margin-left: 10%;
-    }
-
-    h1 {
-      color: aliceblue;
-      text-align: center;
-    }
-    h2 {
-      color: rgb(255, 255, 255);
-      font-size: 30px;
-    }
-    p {
-      font-size: 20px;
-      letter-spacing: 2px;
-      line-height: 32px;
-      color: #ffffff;
-    }
-
-    .grid-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      border-bottom: 2px solid white;
-      padding-bottom: 50px;
-    }
-
-    .box-containers {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      padding-top: 50px;
-    }
-  }
-</style>
+<style></style>
