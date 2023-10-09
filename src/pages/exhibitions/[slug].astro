@@ -40,9 +40,6 @@ console.log(post);
 </section>
 </MainLayout>
 <style>
-    img{
-        width: 85%;
-    }
     .artist, .info, .location{
         margin: 20px;
         color: var(--primary-text);
@@ -51,17 +48,19 @@ console.log(post);
         text-align: center;
     }
     section{
+        display: grid;
             grid-column: 2;
             grid-row: 2;
         }
         section img{
             margin: auto;
-            max-width: 100%;
             display: block;
+            width: 85%;
+
         }
         @media (min-width: 800px) {
-            main {
-                flex-direction: column;
+            section {
+                grid-template-columns: 1fr 1fr;
             }
             section {
                 margin-right: 20px;
