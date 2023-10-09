@@ -3,7 +3,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 :root {
   --bg-gradient: linear-gradient(to bottom, #100000, #152141);
   --primary-text: white;
@@ -29,14 +28,15 @@ h1 {
 }
 h2 {
   font-weight: 600;
-  font-size: px;
+  font-size: 20px;
 }
 
 h1, 
 h2,
 h3,
 h4,
-p
+p, ul,
+li
  {
   color: var(--primary-text);
   font-family: var(--font-family);
