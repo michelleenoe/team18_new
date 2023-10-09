@@ -25,7 +25,8 @@ console.log(post);
 ---
 
 <MainLayout>
-<section>
+    <section>
+    <a class="backbtn" href="../exhibitions/">BACK</a>
     <img src={post.image} alt="Exhibition photo"> 
     <article>
     <h2>{post.navn}</h2>
@@ -34,7 +35,7 @@ console.log(post);
     <h3>Thanks to</h3>
     <p class="location">{post.where}</p>
     <div class="kunstnerlist">
-        <a href={post.links} target="_blank">GÅ TIL KUNSTNER</a>
+    <a href={post.links} target="_blank">GÅ TIL KUNSTNER</a>
 </div>
 </article>
 </section>
@@ -44,30 +45,35 @@ console.log(post);
         margin: 20px;
         color: var(--primary-text);
     }
-     .artist, .location, h2, h3{
+     .artist, .kunstnerlist, .location, h2, h3{
         text-align: center;
     }
+    
     section{
         display: grid;
-            grid-column: 2;
-            grid-row: 2;
-        }
-        section img{
-            margin: auto;
-            display: block;
-            width: 85%;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    section img{
+        margin: auto;
+        display: block;
+        width: 85%;
+        
+    }
+    .backbtn{
+        margin: 3.5%;
+    }
+    @media (min-width: 800px) {
 
+        .backbtn{
+            grid-row: 2;
+        }        
+        section {
+            grid-template-columns: 1fr 1fr;
         }
-        @media (min-width: 800px) {
-            section {
-                grid-template-columns: 1fr 1fr;
-            }
-            section {
-                margin-right: 20px;
-                text-align: left;
-            }
-            .back {
-                order: -1;
-            }
+        section {
+            margin-right: 20px;
+            text-align: left;
+        }
         }
     </style>
