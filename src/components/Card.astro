@@ -4,7 +4,7 @@ console.log(data);
 ---
 
 <article>
-  <a class="gotosingle" href={`/exhibitions/${data.slug}`}>
+  <a class="gotosingle" @href={`single/${data.slug}`}>
     <img src={data.image} alt="Exhibition photo"> 
     <h2>{data.navn}</h2>
     <h3>{data.where}</h3>
@@ -37,6 +37,7 @@ console.log(data);
     color: white;
     font-size: 16px;
     margin: auto;
+    white-space: nowrap;
   }
 
   h3 {
@@ -68,13 +69,10 @@ console.log(data);
   }
 
   @media (min-width: 1250px) {
-    article {
-      width: 110%;
-    }
 
     h2 {
-      height: 12%;
-      font-size: 20px;
+      
+      font-size: 16px;
     }
 
     h3 {
