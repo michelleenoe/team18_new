@@ -47,7 +47,7 @@ h3 {
   font-weight: 300;
 }
 a:hover,
-nav a:hover {
+nav a:hover, .menutext, .kunstnerlist {
   color: #ff9900;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -56,20 +56,21 @@ p {
   font-size: 15px;
   font-weight: 300;
 }
-a:link {
+a:link, .menutext, .kunstnerlist {
   color: var(--primary-text);
 }
 
-a:active {
+a:active, .menutext, .kunstnerlist {
   color: var(--secondary-text);
 }
 
 
 p,
-li, a {
+li, a, .menutext, .kunstnerlist, .info {
   font-family: var(--font-family);
   font-size: 15px;
   font-weight: 300;
+  color:var(--primary-text);
 }
 
 header {
