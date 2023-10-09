@@ -1,4 +1,5 @@
 ---
+import MainLayout from "../../layouts/MainLayout.astro";
 export async function getStaticPaths() {
     const data = await fetch (
         "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
@@ -20,34 +21,9 @@ export async function getStaticPaths() {
 }
 const {post} = Astro.props;
 console.log(post);
-/*
-{
-  navn: 'TIME AND PLACE',
-  who: 'Tokyo Blue (DK)',
-  where: 'Vestre Kirkegård, entrance from Bavnehøj Allé',
-  time: '',
-  Info: 'Søndre Kapel is a chapel that has been left unchanged through the ages. This sculpture shows us how the sunlight moves throughout the year. The hanging discs represent the oval sunbeams that illuminate the inner walls of the chapel at different times of the year. Time collapses inside Søndre Kapel.\n' +
-    '\n' +
-    'Tokyo Blue consists of Helle Frøjk Knudsen, Katrin Barrie Larsen, Silla Findstrøm Herbst and Astrid Espenhain. Their installations are often based on existing spaces and architecture in which light and colour are intertwined with the multitude of stories, associations or historical layers associated with the places themselves.\n' +
-    '\n' +
-    'At this year’s Copenhagen Light Festival, Tokyo Blue transform Lille Langebro with their installation “Water Walk”, just like they did in 2022 with “JAM” as well as in 2021 with “The grass is always greener…”.',
-  links: 'www.tokyoblue.dk\n',
-  thanks: 'Bavnehøj Områdefornyelse',
-  image: 'https://i.ibb.co/C94vFsn/time-place.webp',
-  slug: 'TIME-AND-PLACE'
-}
-*/
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Copenhagen Light Festival</title>
-  </head>
+<MainLayout>
 <section>
     <img src={post.image} alt="Exhibition photo"> 
     <article>
@@ -61,7 +37,7 @@ console.log(post);
 </div>
 </article>
 </section>
-
+</MainLayout>
 <style>
     .kunstnerlist a{
         color: var(--secondary-text);
