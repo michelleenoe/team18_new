@@ -58,7 +58,14 @@ console.log(data);
     margin: 0 5%;
   }
 
-
+  @media (max-width: 575px) {
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
   @media (min-width: 1250px) {
     article {
       display: grid;
