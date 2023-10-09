@@ -1,7 +1,10 @@
 /* Mobile */
 @media screen and (max-width: 1000px) {
   body {
+<<<<<<< HEAD
     background-image: linear-gradient(to bottom, #100000, #152141);
+=======
+>>>>>>> master
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,40 +35,56 @@
 
   h1 {
     font-size: 40px;
+<<<<<<< HEAD
     color: aliceblue;
     text-align: center;
   }
   h2 {
     color: rgb(255, 255, 255);
+=======
+    text-align: center;
+  }
+  h2 {
+>>>>>>> master
     font-size: 20px;
   }
   p {
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 32px;
+<<<<<<< HEAD
     color: #ffffff;
+=======
+>>>>>>> master
   }
   ul li {
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 30px;
+<<<<<<< HEAD
     color: #ffffff;
+=======
+>>>>>>> master
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
   body {
+<<<<<<< HEAD
     background-image: linear-gradient(to bottom, #100000, #152141);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 36px;
+=======
+>>>>>>> master
     margin-right: 10%;
     margin-left: 10%;
   }
 
   h1 {
+<<<<<<< HEAD
     color: aliceblue;
     text-align: center;
   }
@@ -96,6 +115,27 @@
     display: flex; /* Make the items align horizontally */
     justify-content: center;
     list-style: none; /* Remove the default list bullet points */
+=======
+    color:var( --primary-text);
+    text-align: center;
+  }
+ 
+  p {
+    letter-spacing: 2px;
+    line-height: 32px;
+
+  }
+
+  ul, li {
+    letter-spacing: 2px;
+    line-height: 45px;
+  }
+
+  .nav2 nav {
+    display: flex; 
+    justify-content: center;
+    list-style: none; 
+>>>>>>> master
     border-bottom: 2px solid white;
   }
 
@@ -105,6 +145,7 @@
   }
 
   .nav2 a {
+<<<<<<< HEAD
     text-decoration: none; /* Remove text decoration (underline) */
     font-size: 17px;
     color: #ffffff;
@@ -113,6 +154,14 @@
   .nav2 a:hover {
     color: #ff9900; /* Change text color on hover */
     transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+=======
+    text-decoration: none; 
+  }
+
+  .nav2 a:hover {
+    color: #ff9900; 
+    transition: background-color 0.3s, color 0.3s; 
+>>>>>>> master
   }
 
   .grid-1-1 {
@@ -131,7 +180,11 @@
   }
 
   .yt-video {
+<<<<<<< HEAD
     padding-top: 30px;
+=======
+    padding-top: 35px;
+>>>>>>> master
     padding-left: 20px;
   }
 }
