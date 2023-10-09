@@ -48,6 +48,7 @@ console.log(post);
         text-align: center;
     }
     section{
+        display: grid;
             grid-column: 2;
             grid-row: 2;
         }
@@ -58,8 +59,8 @@ console.log(post);
 
         }
         @media (min-width: 800px) {
-            main {
-                flex-direction: column;
+            section {
+                grid-template-columns: 1fr 1fr;
             }
             section {
                 margin-right: 20px;
