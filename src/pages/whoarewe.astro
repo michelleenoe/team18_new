@@ -163,118 +163,132 @@ import Logo from "../components/Logo.astro";
 
 <style>
   /* Mobile */
-@media screen and (max-width: 1000px) {
-  body {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: 8%;
-    margin-left: 8%;
+  @media screen and (max-width: 1000px) {
+    body {
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 8%;
+      margin-left: 8%;
+    }
+
+    .grid-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      border-bottom: 2px solid white;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
+    .box-containers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .yt-video iframe {
+      width: 360px;
+      height: 225px;
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 32px;
+    }
+    ul li {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 30px;
+    }
+
+    .nav2 nav {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      border-bottom: 2px solid white;
+    }
+
+    .nav2 li {
+      margin-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    .nav2 a {
+      text-decoration: none;
+    }
   }
 
-  .grid-1-1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    border-bottom: 2px solid white;
+  /* Desktop */
+  @media screen and (min-width: 1000px) {
+    body {
+      margin-right: 10%;
+      margin-left: 10%;
+    }
 
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
+    h1 {
+      color: var(--primary-text);
+      text-align: center;
+    }
 
-  .box-containers {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
+    p {
+      letter-spacing: 2px;
+      line-height: 32px;
+    }
 
-  .yt-video iframe {
-    width: 360px;
-    height: 225px;
-  }
+    ul,
+    li {
+      letter-spacing: 2px;
+      line-height: 45px;
+    }
 
-  h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  p {
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 32px;
-  }
-  ul li {
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 30px;
-  }
-}
+    .nav2 nav {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      border-bottom: 2px solid white;
+    }
 
-/* Desktop */
-@media screen and (min-width: 1000px) {
-  body {
-    margin-right: 10%;
-    margin-left: 10%;
-  }
+    .nav2 li {
+      margin-right: 30px;
+      padding-bottom: 10px;
+    }
 
-  h1 {
-    color:var( --primary-text);
-    text-align: center;
-  }
- 
-  p {
-    letter-spacing: 2px;
-    line-height: 32px;
+    .nav2 a {
+      text-decoration: none;
+    }
 
-  }
+    .nav2 a:hover {
+      color: #ff9900;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-  ul, li {
-    letter-spacing: 2px;
-    line-height: 45px;
-  }
+    .grid-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      border-bottom: 2px solid white;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
 
-  .nav2 nav {
-    display: flex; 
-    justify-content: center;
-    list-style: none; 
-    border-bottom: 2px solid white;
-  }
+    .box-containers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
 
-  .nav2 li {
-    margin-right: 30px;
-    padding-bottom: 10px;
+    .yt-video {
+      padding-left: 20px;
+    }
   }
-
-  .nav2 a {
-    text-decoration: none; 
-  }
-
-  .nav2 a:hover {
-    color: #ff9900; 
-    transition: background-color 0.3s, color 0.3s; 
-  }
-
-  .grid-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    border-bottom: 2px solid white;
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .box-containers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .yt-video {
-    padding-top: 35px;
-    padding-left: 20px;
-  }
-}
-
 </style>
