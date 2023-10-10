@@ -1,73 +1,95 @@
 ---
+import Nav from "../../components/Nav.astro";
 import "../../css/style.css";
 import MainLayout from "../../layouts/MainLayout.astro";
 export async function getStaticPaths() {
-    const data = await fetch (
-        "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
-        {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY",
-    },
-  } 
+  const data = await fetch(
+    "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeXV0b3VqbWZuc2lyZ3FheWVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5MjAzNTEsImV4cCI6MjAxMTQ5NjM1MX0._MQofBF4ewfenzMBblhewUu4Kn7vUPw8qYEfQ_Y0btY",
+      },
+    }
   ).then((response) => response.json());
 
   return data.map((post) => {
     return {
-        params: { slug: post.slug },
-        props: { post },
+      params: { slug: post.slug },
+      props: { post },
     };
   });
 }
-const {post} = Astro.props;
+const { post } = Astro.props;
 console.log(post);
 ---
 
-<MainLayout>
-<section>
-    <img src={post.image} alt="Exhibition photo"> 
-    <article>
-    <h2>{post.navn}</h2>
-    <h3>{post.who}</h3>
-    <div class="info" set:html={post.Info}></div>
-    <h3>Thanks to</h3>
-    <p class="location">{post.where}</p>
-    <div class="kunstnerlist">
-        <a href={post.links} target="_blank">GÅ TIL KUNSTNER</a>
-</div>
-</article>
-</section>
-</MainLayout>
-<style>
-    .artist, .info, .location{
-        margin: 20px;
-        color: var(--primary-text);
-    }
-     .artist, .location, h2, h3{
-        text-align: center;
-    }
-    section{
-        display: grid;
-            grid-column: 2;
-            grid-row: 2;
-        }
-        section img{
-            margin: auto;
-            display: block;
-            width: 85%;
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Exhibitons</title>
+  </head>
 
-        }
-        @media (min-width: 800px) {
-            section {
-                grid-template-columns: 1fr 1fr;
-            }
-            section {
-                margin-right: 20px;
-                text-align: left;
-            }
-            .back {
-                order: -1;
-            }
-        }
-    </style>
+  <Nav />
+  <MainLayout>
+    <section>
+      <a class="backbtn" href="../exhibitions/">BACK</a>
+      <img src={post.image} alt="Exhibition photo" />
+      <article>
+        <h2>{post.navn}</h2>
+        <h3>{post.who}</h3>
+        <div class="info" set:html={post.Info} />
+        <h3>Thanks to</h3>
+        <p class="location">{post.where}</p>
+        <div class="kunstnerlist">
+          <a href={post.links} target="_blank">GÅ TIL KUNSTNER</a>
+        </div>
+      </article>
+    </section>
+  </MainLayout>
+  <style>
+    .artist,
+    .info,
+    .location {
+      margin: 20px;
+      color: var(--primary-text);
+    }
+    .artist,
+    .kunstnerlist,
+    .location,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    section {
+      display: grid;
+      grid-column: 2;
+      grid-row: 2;
+    }
+    section img {
+      margin: auto;
+      display: block;
+      width: 85%;
+    }
+    .backbtn {
+      margin: 3.5%;
+    }
+    @media (min-width: 800px) {
+      .backbtn {
+        grid-row: 2;
+      }
+      section {
+        grid-template-columns: 1fr 1fr;
+      }
+      section {
+        margin-right: 20px;
+        text-align: left;
+      }
+    }
+  </style>
+</html>
