@@ -32,7 +32,9 @@ console.log(data);
     <header>
     <Logo/>
       <Nav/>
-      
+      <div class="filter">
+        <h2>Filter</h2>
+      </div>
     </header>
 
     <main>
@@ -48,6 +50,17 @@ console.log(data);
 </html>
 
 <style>
+  button{
+    width: 5%;    
+  }
+
+  .filter{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+
  article {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,7 +68,6 @@ console.log(data);
   gap: 2rem; 
   width: 100%;
 }
-
 
   main{
     margin: auto;
