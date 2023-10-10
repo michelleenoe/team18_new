@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_5" data-name="Layer 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.01 35.59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8091c4;
+        font-family: Kanit-ExtraLight, Kanit;
+        font-size: 30px;
+        font-weight: 200;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.11em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="-241.4" y="-100.03" width="592.64" height="841.89"/>
+  <text class="cls-1" transform="translate(12.81 32.95)"><tspan class="cls-5" x="0" y="0">NY</tspan><tspan class="cls-3" x="37.2" y="0">H</tspan><tspan class="cls-6" x="56.1" y="0">A</tspan><tspan class="cls-2" x="72.66" y="0">V</tspan><tspan x="92.25" y="0">N</tspan></text>
+</svg>
