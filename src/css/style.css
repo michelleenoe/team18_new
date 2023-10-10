@@ -49,7 +49,13 @@ li
 }
 h3 {
   font-weight: 300;
+  font-size: 1.2rem;
 }
+h4 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
 a:hover,
 nav a:hover, .menutext, .kunstnerlist {
   color: #ff9900;
@@ -59,6 +65,7 @@ p {
 
   font-size: 15px;
   font-weight: 300;
+  font-size: 12px;
 }
 a:link, .menutext, .kunstnerlist {
   color: var(--primary-text);
@@ -83,7 +90,4 @@ header {
 
 footer {
   margin-top: var(--footer-margin-top);
-}
-h1 {
-  
 }
