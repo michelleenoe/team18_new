@@ -67,6 +67,7 @@ p {
   font-weight: 300;
   font-size: 12px;
 }
+
 a:link, .menutext, .kunstnerlist {
   color: var(--primary-text);
 }
@@ -86,6 +87,7 @@ li, a, .menutext, .kunstnerlist, .info {
 
 header {
   margin-bottom: var(--header-margin-bottom);
+
 }
 
 footer {
