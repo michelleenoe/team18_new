@@ -1,10 +1,10 @@
 ---
-
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
 import Logo from "../components/Logo.astro";
 import "../css/style.css";
 import Footer from "../components/Footer.astro";
+import Filter from "../components/Filter.astro";
 
 const data = await fetch(
   "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
@@ -20,6 +20,7 @@ const data = await fetch(
 console.log(data);
 
 
+
 ---
 
 <html lang="en">
@@ -33,75 +34,69 @@ console.log(data);
 
   <body>
     <header>
-      <Nav/>
-      <Logo/>
-      <div class="filter">
-        <a id="allKbhButton" class="filterbutton">Hele København</a>
-        <a id="kbhNButton" class="filterbutton">København N</a>
-        <a id="kbhOButton" class="filterbutton">København Ø</a>
-        <a id="kbhSButton" class="filterbutton">København S</a>
-        <a id="kbhVButton" class="filterbutton">København V</a>        
-      </div>
+      <Nav />
+      <Logo />
+      <Filter />
     </header>
 
     <main>
-      <article>
+      <article class="filter1">
         {
-          data.map((card) => {
-            return <Card data={card} />;
-          })
+          data
+            .filter((card) => card.area === "1")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter2">
+        {
+          data
+            .filter((card) => card.area === "2")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter3">
+        {
+          data
+            .filter((card) => card.area === "1")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter4">
+        {
+          data
+            .filter((card) => card.area === "3")
+            .map((card) => {
+              return <Card data={card} />;
+            })
         }
       </article>
     </main>
+    
+    
   </body>
-  <footer><Footer/></footer>
+  <footer><Footer /></footer>
 </html>
 
 <style>
-  .filterbutton{
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 24px;
-    overflow: hidden;
-    transition: 0.2s;
-    margin: 5px 0;
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
   }
 
-  .filterbutton:hover{
-    cursor: pointer;
-  }
-
-  .filter{
-    padding: 10px 20px;
-    letter-spacing: 4px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.2s;
-    margin: 5px 0;
-    display: flex;
-    justify-content: center;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    margin-bottom: 5%
-  }
-
- article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  gap: 2rem; 
-  width: 100%;
-}
-
-  main{
+  main {
     margin: auto;
   }
->
-  @media (max-width: 575px) {
+  > @media (max-width: 575px) {
     article {
       display: flex;
       justify-content: center;
@@ -113,8 +108,8 @@ console.log(data);
     article {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      
     }
   }
-
 </style>
+
+
