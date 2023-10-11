@@ -1,10 +1,10 @@
 <body>
-<header>
-  <div class="container">
-  <img class ="logo"src="../../img/little-logo.webp" alt="Lille logo. Little logo" />
-  <img class="glow" src="../../img/ligth.webp" alt="" />
-</div>
-</header>
+  <header>
+    <div class="container">
+      <img class="logo" src="../../img/little-logo.webp" alt="Lille logo. Little logo" />
+      <img class="glow" src="../../img/ligth.webp" alt="" />
+    </div>
+  </header>
 </body>
 
 <style>
@@ -13,16 +13,18 @@
     overflow: hidden;
     width: 50%;
   }
+
   .logo {
-  width:30%;
-  height:20%;
-  scale:70%;
+    width: 30%;
+    height: 20%;
+    transform: scale(0.7);
   }
+
   .glow {
-    max-width: 30px; 
+    max-width: 30px;
     position: absolute;
-    top: 32%;
-    left: 12%;
+    top: 39%;
+    left: 13%;
     animation-name: glow;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -44,9 +46,16 @@
     }
   }
 
-  @media (min-width: 800px) {
+  @media (max-width: 799px) {
+    .logo {
+      width: 50%; /* Adjust for mobile */
+      height: auto; /* Reset height */
+      transform: scale(1); /* Reset transform */
+    }
+
     .glow {
-      max-width: 40px;
+      max-width: 20px; /* Adjust for mobile */
+      left:20%;
     }
   }
 </style>
