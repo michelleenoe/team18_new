@@ -153,6 +153,9 @@ import Logo from "../components/Logo.astro";
             </li>
           </ul>
         </article>
+        <div class="blueearth">
+          <img src="../img/Blue Earth 2.webp" alt="Blue Earth" />
+        </div>
       </div>
     </section>
     <footer></footer>
@@ -174,7 +177,6 @@ import Logo from "../components/Logo.astro";
       grid-template-columns: 1fr;
       gap: 2rem;
       border-bottom: 2px solid white;
-
       padding-top: 35px;
       padding-bottom: 35px;
     }
@@ -188,6 +190,10 @@ import Logo from "../components/Logo.astro";
     .yt-video iframe {
       width: 360px;
       height: 225px;
+    }
+
+    .blueearth img {
+      width: 100%;
     }
 
     h1 {
@@ -209,19 +215,21 @@ import Logo from "../components/Logo.astro";
     }
 
     .nav2 nav {
-      display: flex;
-      justify-content: center;
+      display: inline-block;
+      text-align: center;
       list-style: none;
       border-bottom: 2px solid white;
     }
 
     .nav2 li {
-      margin-right: 30px;
+      margin-right: 10px;
       padding-bottom: 10px;
     }
 
     .nav2 a {
       text-decoration: none;
+      font-size: 18.5px;
+      white-space: nowrap;
     }
   }
 
@@ -271,6 +279,7 @@ import Logo from "../components/Logo.astro";
     .grid-1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      align-items: center;
       gap: 5rem;
       border-bottom: 2px solid white;
       padding-top: 70px;
@@ -283,8 +292,8 @@ import Logo from "../components/Logo.astro";
       gap: 3rem;
     }
 
-    .yt-video {
-      padding-left: 20px;
+    .blueearth img {
+      width: 100%;
     }
   }
 </style>
