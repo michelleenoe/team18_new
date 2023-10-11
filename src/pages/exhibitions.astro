@@ -118,7 +118,7 @@ console.log(data);
   const articles = document.querySelectorAll("article");
 
   // Variable to store the active button
-  let activeButton = null;
+  let activeButton = document.querySelector(".filterbutton.active");
 
   // Add a click event listener to each filter button
   filterButtons.forEach((button) => {
@@ -151,11 +151,16 @@ console.log(data);
       }
 
       // Add the active class to the clicked button
-      activeButton = event.target;
+      activeButton = event.target as HTMLElement;
       activeButton.classList.add("active");
     });
   });
 </script>
+
+
+
+
+
 
 
 
