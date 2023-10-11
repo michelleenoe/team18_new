@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
 import Logo from "../components/Logo.astro";
 import "../css/style.css";
+import Footer from "../components/Footer.astro";
 
 const data = await fetch(
   "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
@@ -46,6 +47,7 @@ console.log(data);
       </article>
     </main>
   </body>
+  <footer><Footer/></footer>
 </html>
 
 <style>
