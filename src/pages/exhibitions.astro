@@ -19,8 +19,6 @@ const data = await fetch(
 
 console.log(data);
 
-
-
 ---
 
 <html lang="en">
@@ -111,5 +109,56 @@ console.log(data);
     }
   }
 </style>
+
+
+
+<script>
+  // Get references to the filter buttons and articles
+  const filterButtons = document.querySelectorAll(".filterbutton");
+  const articles = document.querySelectorAll("article");
+
+  // Variable to store the active button
+  let activeButton = null;
+
+  // Add a click event listener to each filter button
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const filterValue = (event.target as HTMLElement).getAttribute("data-filter");
+
+      // Remove the active class from the previous active button
+      if (activeButton) {
+        activeButton.classList.remove("active");
+      }
+
+      // Hide all articles
+      articles.forEach((article) => {
+        if (article instanceof HTMLElement) {
+          article.style.display = "none";
+        }
+      });
+
+      if (filterValue === "all") {
+        articles.forEach((article) => {
+          if (article instanceof HTMLElement) {
+            article.style.display = "grid";
+          }
+        });
+      } else {
+        const correspondingArticle = document.querySelector(`.filter${filterValue}`);
+        if (correspondingArticle instanceof HTMLElement) {
+          correspondingArticle.style.display = "grid";
+        }
+      }
+
+      // Add the active class to the clicked button
+      activeButton = event.target;
+      activeButton.classList.add("active");
+    });
+  });
+</script>
+
+
+
+
 
 

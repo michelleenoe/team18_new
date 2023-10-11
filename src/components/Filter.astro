@@ -3,18 +3,21 @@
 ---
 
 <div class="filter">
-    <a class="filterbutton">Hele København</a>
-    <a class="filterbutton">København N</a>
-    <a class="filterbutton">København Ø</a>
-    <a class="filterbutton">København S</a>
-    <a class="filterbutton">København V</a>
-  </div>
+  <a class="filterbutton" data-filter="all">Hele København</a>
+  <a class="filterbutton" data-filter="1">København N</a>
+  <a class="filterbutton" data-filter="2">København Ø</a>
+  <a class="filterbutton" data-filter="3">København S</a>
+  <a class="filterbutton" data-filter="4">København V</a>
+</div>
+
+
+
   
 
 
 
-  <style>
-    .filterbutton {
+<style>
+  .filterbutton {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -29,6 +32,11 @@
 
   .filterbutton:hover {
     cursor: pointer;
+    /* Add your hover styles here */
+  }
+
+  .filterbutton.active {
+    color: #FF9900;
   }
 
   .filter {
@@ -44,6 +52,7 @@
     border-bottom: 2px solid white;
     margin-bottom: 5%;
   }
-  </style>
+</style>
+
 
   
