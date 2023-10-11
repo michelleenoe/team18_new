@@ -18,6 +18,8 @@ const data = await fetch(
 ).then((res) => res.json());
 
 console.log(data);
+
+
 ---
 
 <html lang="en">
@@ -34,7 +36,11 @@ console.log(data);
       <Nav/>
       <Logo/>
       <div class="filter">
-        <h2>Filter</h2>
+        <a id="allKbhButton" class="filterbutton">Hele København</a>
+        <a id="kbhNButton" class="filterbutton">København N</a>
+        <a id="kbhOButton" class="filterbutton">København Ø</a>
+        <a id="kbhSButton" class="filterbutton">København S</a>
+        <a id="kbhVButton" class="filterbutton">København V</a>        
       </div>
     </header>
 
@@ -52,15 +58,35 @@ console.log(data);
 </html>
 
 <style>
-  button{
-    width: 5%;    
+  .filterbutton{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 5px 0;
+  }
+
+  .filterbutton:hover{
+    cursor: pointer;
   }
 
   .filter{
+    padding: 10px 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 5px 0;
     display: flex;
     justify-content: center;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    margin-bottom: 5%
   }
 
  article {
