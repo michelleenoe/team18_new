@@ -1,3 +1,47 @@
+<header>
+    <div id="title-container">
+        <h1>COPENHAGEN LIGHT FESTIVAL</h1>
+    </div>
+    <div id="countdown-container">
+        
+        <span id="countdown"> <br></span>
+ 
+    </div>
+</header>
+
+
+
+<style>
+
+
+#title-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#title-container h1 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+#countdown-container {
+    border-left: 2px solid #2196f3;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#countdown {
+    font-family: var(--font-family);
+    font-size: 20px;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+</style>
 
 <script> 
     var countDownDate = new Date("Feb 3, 2024 00:00:00").getTime();
@@ -27,18 +71,3 @@
         }
     }, 1000); // Opdater hvert sekund
 </script>
-<header>
-                <span id="countdown"></span>
-                <div class="date">
-                    <p> UNTIL  </p> 
-        
-        </div>
-    </header>
-
-<style>
-.date, #countdown{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
-}
-
-</style>
