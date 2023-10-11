@@ -1,9 +1,9 @@
 ---
 import "../css/style.css";
+import "../css/general.css";
 import Fronttext from "../components/Fronttext.astro";
 import Frontnav from "../components/Frontnav.astro";
-import Frontimg from "../components/Frontimg.astro";
-import MainLayout from "../layouts/MainLayout.astro"
+import Header from "../components/Header.astro";
 ---
 
 
@@ -16,14 +16,19 @@ import MainLayout from "../layouts/MainLayout.astro"
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
+    <div class="bg">
     <header>
- 
+ <Header/>
     </header>
 <main>
-      <Frontimg />
-      <Fronttext />
+  <section class=grid-container>
       <Frontnav />
+
+      <Fronttext />
+            </section>
+
 </main>
 </footer>
+</div>
 </body>
 </html>
