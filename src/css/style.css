@@ -46,9 +46,10 @@ h4 {
 }
 
 a:hover,
-nav a:hover, .menutext, .kunstnerlist {
+nav a:hover, .menutext, .kunstnerlist, ul a:hover {
   color: #ff9900;
   transition: background-color 0.3s, color 0.3s;
+
 }
 p {
 
@@ -61,8 +62,9 @@ a:link, .menutext, .kunstnerlist {
   color: var(--primary-text);
 }
 
-a:active, .menutext, .kunstnerlist {
+a:active, .menutext, .kunstnerlist, .maps {
   color: var(--secondary-text);
+  
 }
 
 
