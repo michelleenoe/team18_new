@@ -14,25 +14,25 @@
       <ul>
         <li>
           <div class="menu-item">
-            <a href="/exhibitions" class="menu-text">EXHIBITIONS</a>
+            <a href="exhibitions" class="menu-text">EXHIBITIONS</a>
      
           </div>
         </li>
         <li>
           <div class="menu-item">
-            <a href="#" class="menu-text">INFO</a>
+            <a href="info" class="menu-text">INFO</a>
 
-          </div>
+          </div
         </li>
         <li>
           <div class="menu-item">
-            <a href="/whoarewe" class="menu-text">ABOUT</a>
+            <a href="whoarewe" class="menu-text">ABOUT</a>
     
           </div>
         </li>
         <li>
           <div class="menu-item">
-            <a href="/contact" class="menu-text">CONTACT</a>
+            <a href="contact" class="menu-text">CONTACT</a>
 
           </div>
         </li>
@@ -49,10 +49,15 @@ const overlay = document.getElementById("overlay");
 burger.addEventListener("click", () => {
   overlay.classList.toggle("active");
   burger.classList.toggle("active");
-  
-
   burger.classList.toggle("hidden");
   crossIcon.classList.toggle("hidden");
+});
+
+crossIcon.addEventListener("click", () => {
+  overlay.classList.remove("active");
+  burger.classList.remove("active");
+  burger.classList.remove("hidden");
+  crossIcon.classList.remove("hidden");
 });
 
 </script>
