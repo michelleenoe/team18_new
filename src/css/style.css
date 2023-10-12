@@ -33,7 +33,7 @@ li
  {
   color: var(--primary-text);
   font-family: var(--font-family);
-
+  letter-spacing: 3px;
 
 }
 h3 {
