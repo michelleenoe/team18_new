@@ -3,78 +3,103 @@ import "../css/style.css";
 ---
 
 <section class="grid-section">
-    <div class="text">
-        <h2>DOWNLOAD THE APP FOR FREE</h2>
-        <p>Use your mobile to find the artworks from wherever you are!</p>
-        <p>Within 10 Minutes is an app you can download here:</p>
-        <ul>
-            <li><a href="https://play.google.com/store/apps/details?id=com.indenfor10minutter" target="_blank">Google Play</a></li>
-            <li><a href="https://apps.apple.com/dk/app/indenfor10minutter/id1258241928?l=da" target="_blank">App Store</a></li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="../../img/bg_img/telefonapp.png">
-    </div>
+  <div class="text">
+    <h2>DOWNLOAD THE APP FOR FREE</h2>
+    <p>Use your mobile to find the artworks from wherever you are!</p>
+    <p>Within 10 Minutes is an app you can download here:</p>
+    <ul>
+      <li>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.indenfor10minutter"
+          target="_blank">Google Play</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://apps.apple.com/dk/app/indenfor10minutter/id1258241928?l=da"
+          target="_blank">App Store</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="image-mobileicon">
+    <img src="../../img/mobileicon.webp" />
+  </div>
 </section>
 
 <section class="grid-section">
-    <div class="image">
-        <img src="../../img/bg_img/kort 1.png">
-    </div>
-    <div class="maps">
-        <h2>DOWNLOAD ALL OUR ROUTES RIGHT HERE</h2>
-        <p>Click the links below to download:</p>
-        <ul>
-            <li><a href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-2.5km.pdf">2.5 KM</a></li>
-            <li><a href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-3.5km.pdf">3.5 KM</a></li>
-            <li><a href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-4km.pdf">4 KM</a></li>
-        </ul>
-    </div>
-    
-    </div>
-
+  <div class="image">
+    <img src="../../img/bg_img/kort 1.png" />
+  </div>
+  <div class="maps">
+    <h2>DOWNLOAD ALL OUR ROUTES RIGHT HERE</h2>
+    <p>Click the links below to download:</p>
+    <ul>
+      <li>
+        <a
+          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-2.5km.pdf"
+          >2.5 KM</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-3.5km.pdf"
+          >3.5 KM</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-4km.pdf"
+          >4 KM</a
+        >
+      </li>
+    </ul>
+  </div>
 </section>
 
 <style>
-.grid-section {
+  .grid-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px; 
+    gap: 20px;
     margin: var(--content-margin);
     background-color: var(--bg-gradient);
     color: var(--primary-text);
     justify-content: center;
     align-items: center;
-    border-top: 2px solid #fff;
-}
+  }
 
-.text {
+  .text {
     text-align: center;
     padding: var(--heading-padding);
     font-family: var(--font-family);
-}
+  }
 
-.image img {
+  .image img {
     max-width: 80%;
     height: auto;
     display: block;
     margin: 0 auto;
-}
+  }
 
+  .image-mobileicon img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-ul {
+  ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     border: none;
-}
+  }
 
-
-ul li {
-    margin: 5px 0; 
-}
-.maps {
+  ul li {
+    margin: 5px 0;
+  }
+  .maps {
     text-align: center;
-}
+  }
 </style>
-</html>
