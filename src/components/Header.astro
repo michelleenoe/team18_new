@@ -2,6 +2,7 @@
     <div id="title-container">
         <h1>COPENHAGEN LIGHT FESTIVAL</h1>
     </div>
+ 
     <div id="countdown-container">
         
         <span id="countdown"> <br></span>
@@ -18,14 +19,13 @@
     margin-right: 20px;
     margin-top: 2rem;
 }
-
 #title-container h1 {
     font-family: var(--font-family);
     font-size: 40px;
     color: var(--primary-text);
     margin: 0;
+    letter-spacing: 7px;
 }
-
 #countdown-container {
     border-left: 2px solid var(--secondary-text);
     padding-left: 20px;
@@ -38,6 +38,11 @@
     font-size: 30px;
     color: var(--primary-text);
     margin: 0;
+    letter-spacing: 5px;
+}
+h2 {
+    font-weight: 300;
+    letter-spacing: 3px;
 }
 @media screen and (max-width: 758px) {
     #title-container {
@@ -51,6 +56,7 @@
  #countdown {
     font-size: 15px;
  }
+
 }
 </style>
 
@@ -73,7 +79,7 @@
 
         // Vis nedtællingen i et element med id'en "countdown"
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        + minutes + "m " + seconds + "s " + "<br><p>February 3rd - 25th 2024</p>";
 
         // Hvis nedtællingen er nået, vis en besked
         if (distance < 0) {
