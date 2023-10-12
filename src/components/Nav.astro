@@ -6,7 +6,6 @@
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-        <div class="cross-icon" id="cross-icon">✕</div>
       </div>
   
     </div>
@@ -36,31 +35,38 @@
 
           </div>
         </li>
+        <li>
+          <div class="menu-item back">
+            <a href="#" class="menu-text">BACK</a>
+
+          </div>
+        </li>
+
+        
       </ul>
     </div>
   </nav>
   
 
+
+
 <script>
+const burger = document.getElementById("burger");
 
-const burger = document.getElementById('burger');
-const overlay = document.getElementById('overlay');
-const crossIcon = document.getElementById('cross-icon');
+const overlay = document.getElementById("overlay");
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  overlay.classList.toggle('active');
-  crossIcon.style.display = 'block'; 
+burger.addEventListener("click", () => {
+  overlay.classList.toggle("active");
+  burger.classList.toggle("active");
+
+  
+  burger.classList.toggle("hidden");
 });
-
-crossIcon.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  overlay.classList.toggle('none');
-  crossIcon.style.display = 'none'; 
-});
-
 
 </script>
+
+
+</sc>
 
 <style>
     nav {
@@ -125,15 +131,28 @@ a {
   font-size: 1.3rem;
 }
 
+.menu-item.back {
+  margin: auto;
+  width: 200px; 
+}
+
 .menu-text {
   flex: 1; 
 }
-.cross-icon {
-  font-size: 35px;
-  color: var(--primary-text);
-  display: none; 
-  cursor: pointer; 
+
+
+
+
+
+.active{
+  z-index: 6;
 }
+
+.burger.active .bar {
+  display: none;
+}
+
+
 
 
 .burger.active .bar {
@@ -141,17 +160,6 @@ a {
 }
 
 
-.burger.active .cross-icon {
-  display: block;
-}
-
-.burger.active .bar {
-  display: none;
-}
-
-.burger.active .cross-icon {
-  display: block;
-}
 
 
 
@@ -178,6 +186,7 @@ a {
 .overlay.active {
     right: 0;
     display: flex; 
+    z-index: 5;
 }
 
 
