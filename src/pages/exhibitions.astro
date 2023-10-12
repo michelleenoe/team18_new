@@ -1,10 +1,10 @@
 ---
-
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
 import Logo from "../components/Logo.astro";
 import "../css/style.css";
 import Footer from "../components/Footer.astro";
+import Filter from "../components/Filter.astro";
 
 const data = await fetch(
   "https://ffyutoujmfnsirgqayei.supabase.co/rest/v1/program2023",
@@ -18,6 +18,7 @@ const data = await fetch(
 ).then((res) => res.json());
 
 console.log(data);
+
 ---
 
 <html lang="en">
@@ -31,51 +32,69 @@ console.log(data);
 
   <body>
     <header>
-      <Nav/>
-      <Logo/>
-      <div class="filter">
-        <h2>Filter</h2>
-      </div>
+      <Nav />
+      <Logo />
+      <Filter />
     </header>
 
     <main>
-      <article>
+      <article class="filter1">
         {
-          data.map((card) => {
-            return <Card data={card} />;
-          })
+          data
+            .filter((card) => card.area === "1")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter2">
+        {
+          data
+            .filter((card) => card.area === "2")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter3">
+        {
+          data
+            .filter((card) => card.area === "1")
+            .map((card) => {
+              return <Card data={card} />;
+            })
+        }
+      </article>
+      <article class="filter4">
+        {
+          data
+            .filter((card) => card.area === "3")
+            .map((card) => {
+              return <Card data={card} />;
+            })
         }
       </article>
     </main>
+    
+    
   </body>
-  <footer><Footer/></footer>
+  <footer><Footer /></footer>
 </html>
 
 <style>
-  button{
-    width: 5%;    
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
   }
 
-  .filter{
-    display: flex;
-    justify-content: center;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-  }
-
- article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  gap: 2rem; 
-  width: 100%;
-}
-
-  main{
+  main {
     margin: auto;
   }
->
-  @media (max-width: 575px) {
+  > @media (max-width: 575px) {
     article {
       display: flex;
       justify-content: center;
@@ -87,8 +106,64 @@ console.log(data);
     article {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      
     }
   }
-
 </style>
+
+
+
+<script>
+  // Get references to the filter buttons and articles
+  const filterButtons = document.querySelectorAll(".filterbutton");
+  const articles = document.querySelectorAll("article");
+
+  // Variable to store the active button
+  let activeButton = document.querySelector(".filterbutton.active");
+
+  // Add a click event listener to each filter button
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const filterValue = (event.target as HTMLElement).getAttribute("data-filter");
+
+      // Remove the active class from the previous active button
+      if (activeButton) {
+        activeButton.classList.remove("active");
+      }
+
+      // Hide all articles
+      articles.forEach((article) => {
+        if (article instanceof HTMLElement) {
+          article.style.display = "none";
+        }
+      });
+
+      if (filterValue === "all") {
+        articles.forEach((article) => {
+          if (article instanceof HTMLElement) {
+            article.style.display = "grid";
+          }
+        });
+      } else {
+        const correspondingArticle = document.querySelector(`.filter${filterValue}`);
+        if (correspondingArticle instanceof HTMLElement) {
+          correspondingArticle.style.display = "grid";
+        }
+      }
+
+      // Add the active class to the clicked button
+      activeButton = event.target as HTMLElement;
+      activeButton.classList.add("active");
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+

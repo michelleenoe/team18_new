@@ -3,7 +3,7 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-<article>
+<div>
   <a class="gotosingle" href={`/exhibitions/${data.slug}`}>
     <img src={data.image} alt="Exhibition photo"> 
   </a>
@@ -12,10 +12,10 @@ console.log(data);
   <h4 class="alink">
     <a class="linka" href={data.links} target="_blank">GÅ TIL KUNSTNER</a>
   </h4>
-</article>
+</div>
 
 <style>
-  article {
+  div {
     text-align: center;
     width: 100%;
     height: auto;
@@ -33,7 +33,7 @@ console.log(data);
   }
   
   img:hover{
-    box-shadow: 0px 0px 10px 0px #038993;
+    box-shadow: 0px 0px 10px 3px #038993;
   }
 
   h2 {
