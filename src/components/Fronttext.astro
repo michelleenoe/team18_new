@@ -28,13 +28,13 @@ import "../css/style.css";
 </section>
 
 <section class="grid-section">
-<<<<<<< HEAD
-    <div class="image">
-        <img src="../../img/bg_img/kort 1.png">
-    </div>
+
     <div class="maps">
         <h2>DOWNLOAD ALL OUR ROUTES RIGHT HERE</h2>
         <p>Click the links below to download:</p>
+        <div class="image">
+            <img src="../../img/bg_img/kort 1.png">
+        </div>
         <ul>
             <li><a href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-2.5km.pdf"target="_blank">2.5 KM</a></li>
             <li><a href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-3.5km.pdf"target="_blank">3.5 KM</a></li>
@@ -44,38 +44,10 @@ import "../css/style.css";
     
     </div>
 
-=======
-  <div class="image">
-    <img src="../../img/bg_img/kort 1.png" />
-  </div>
-  <div class="maps">
-    <h2>DOWNLOAD ALL OUR ROUTES RIGHT HERE</h2>
-    <p>Click the links below to download:</p>
-    <ul>
-      <li>
-        <a
-          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-2.5km.pdf"
-          >2.5 KM</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-3.5km.pdf"
-          >3.5 KM</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Rute-4km.pdf"
-          >4 KM</a
-        >
-      </li>
-    </ul>
-  </div>
->>>>>>> emil
 </section>
 
 <style>
+  
   .grid-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,5 +91,33 @@ import "../css/style.css";
   }
   .maps {
     text-align: center;
+  }
+  @media screen and (max-width:758px) {
+  h2 
+  {
+    font-size: 20px;
+  }
+  .text p {
+    font-size: 15px;
+  }
+  .image img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+  }
+  .image-mobileicon img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+  }
+  .grid-section {
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr 1fr));
+    grid-row-gap: 1px;
+    display: block;
+  }
+
+
   }
 </style>
