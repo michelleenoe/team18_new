@@ -16,28 +16,31 @@ import "../css/style.css";
           <img src="../../img/big-logo.webp" alt="Lille logo. Little logo" />
         </div>
         <div class="button-container">
-          <a href="exhibitions">
+          <h1>CHECK IT OUT RIGHT HERE
+        </h1>
+
+          <a class="ok" href="exhibitions">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Exhibitions
           </a>
-          <a href="#">
+          <a class="ok" href="index.astro">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Info
           </a>
-          <a href="whoarewe">
+          <a class="ok" href="whoarewe">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             About
           </a>
-          <a href="#">
+          <a class="ok" href="index">
             <span></span>
             <span></span>
             <span></span>
@@ -51,7 +54,7 @@ import "../css/style.css";
 </html>
 
 <style>
-   {
+   body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,29 +76,19 @@ import "../css/style.css";
     margin: auto;
   }
 
-  @keyframes glow {
-    0% {
-      opacity: 0.7;
-    }
 
-    60% {
-      opacity: 0.5;
-    }
-    70% {
-      opacity: 0.33;
-    }
-    100% {
-      opacity: 0.7;
-    }
-  }
-
-  .button-container {
+  .button-container a {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 5px 0;
+    width: 50%;
+}
 
-  }
 
   a {
     position: relative;
@@ -108,14 +101,14 @@ import "../css/style.css";
     overflow: hidden;
     transition: 0.2s;
     margin: 5px 0;
-    border-bottom:1px solid;
+    border-bottom:1px solid var(--primary-text);
 
   }
 
   a:hover {
     background: transparent;
 
-    box-shadow: 0 0 10px #d38820, 0 0 40px #072742, 0 0 80px #083961;
+    box-shadow: 0 0 10px #010002, 0 0 40px #072742, 0 0 80px #083961;
     transition-delay: 0.5s;
   }
 
@@ -178,4 +171,12 @@ import "../css/style.css";
     transition: 1s;
     transition-delay: 0.75s;
   }
+  @media (max-width: 768px) {
+  .front-grid {
+    flex-direction: column;
+  }
+
+
+}
+
 </style>

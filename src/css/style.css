@@ -46,7 +46,7 @@ h4 {
 }
 
 a:hover,
-nav a:hover, .menutext, .kunstnerlist, ul a:hover {
+nav a:hover, .menutext, .kunstnerlist, ul a:hover .ok:hover {
   color: #ff9900;
   transition: background-color 0.3s, color 0.3s;
 
@@ -58,7 +58,7 @@ p {
   font-size: 12px;
 }
 
-a:link, .menutext, .kunstnerlist {
+a, link, .menutext, .kunstnerlist {
   color: var(--primary-text);
 }
 
